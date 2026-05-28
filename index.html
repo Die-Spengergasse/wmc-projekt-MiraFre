@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <script src="ai.js" defer></script>
+    <title>Food?Food.</title>
+</head>
+
+<body>
+    <header>
+        <div class="bubble-left">
+            <h1>FOOD?</h1>
+        </div>
+        <div class="bubble-right">
+            <h1>FOOD.</h1>
+        </div>
+        <p class="header-tagline">Mein Problem ist nicht das Kochen &ndash; it&rsquo;s deciding what to make.</p>
+    </header>
+    <main>
+        <section class="vorschlaege">
+            <div class="card-scroll">
+                <button type="button" class="arrow" id="vorschlaege-links"> &lt; </button>
+                <div class="card-scroll-body">
+                    <div class="section-header">
+                        <h2>VORSCHLÄGE</h2>
+                        <div class="section-controls">
+                            <button type="button" class="btn" id="refresh">REFRESH</button>
+                        </div>
+                    </div>
+                    <div class="card-grid" id="vorschlaege-grid"></div>
+                </div>
+                <button type="button" class="arrow" id="vorschlaege-rechts"> > </button>
+            </div>
+        </section>
+
+        <section class="favorites">
+            <div class="card-scroll">
+                <button type="button" class="arrow" id="favoriten-links"> &lt; </button>
+                <div class="card-scroll-body">
+                    <div class="section-header">
+                        <h2>FAVORITEN</h2>
+                    </div>
+                    <div class="card-row" id="favoriten-row"></div>
+                </div>
+                <button type="button" class="arrow" id="favoriten-rechts"> > </button>
+            </div>
+        </section>
+
+        <section class="rezeptbuch" id="rezeptbuch">
+            <h2>REZEPTBUCH</h2>
+            <button type="button" class="arrow" id="ausklappen"> &lt; </button>
+
+            <div class="invisible" id="saved">
+                <div class="saved-header">
+                    <h3>Meine Rezepte</h3>
+                    <button type="button" id="neues-rezept"><span>+</span></button>
+                </div>
+                <ul id="rezepte"></ul>
+            </div>
+
+            <div class="invisible" id="editor">
+                <input type="text" id="rezepttitel" placeholder="Titel">
+                <textarea id="zutaten" placeholder="Zutaten"></textarea>
+                <textarea id="rezeptbeschreibung" placeholder="Rezeptbeschreibung"></textarea>
+                <div class="editor-buttons">
+                    <button type="button" id="speichern-rezept">SPEICHERN</button>
+                    <button type="button" id="loeschen-formular">LÖSCHEN</button>
+                </div>
+            </div>
+
+            <div class="invisible" id="anzeige">
+                <div class="anzeigen-rezept"></div>
+                <div class="editor-buttons">
+                    <button type="button" id="bearbeiten-rezept">BEARBEITEN</button>
+                    <button type="button" id="loeschen-rezept">LÖSCHEN</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>©2026 by Food?Food. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
